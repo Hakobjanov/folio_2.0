@@ -123,11 +123,15 @@ AOS.init({
 window.addEventListener("scroll", function () {
   let scrollPosition = window.pageYOffset;
   if (scrollPosition < 200) {
-    tl.to(".landing-text", { y: "0%", scale: 1 });
-    tl.fromTo(".about", { opacity: 1 }, { opacity: 0 });
+    tl.to(
+      ".landing-text",
+
+      { y: "0%", scale: 1, opacity: 1 }
+    );
+    // tl.fromTo(".about", { opacity: 1 }, { opacity: 0 });
   } else if (scrollPosition < 350) {
     tl.fromTo(".landing-text", { y: "0%" }, { y: "175%", scale: 1.1 });
-    tl.fromTo(".about", { opacity: 0 }, { opacity: 1 }, "-=1");
+    // tl.fromTo(".about", { opacity: 0 }, { opacity: 1 }, "-=1");
   } else if (scrollPosition < 450) {
     tl.fromTo(
       ".landing-text",
